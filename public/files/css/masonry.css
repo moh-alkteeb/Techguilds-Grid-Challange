@@ -1,0 +1,155 @@
+/* Defaults */
+body {
+  background: #8a8a8a;
+  color: black;
+}
+
+li a {
+  color: black;
+  /* transition: all 0.25s ease-in-out; */
+}
+
+#fh5co-logo {
+  text-align: center;
+}
+#fh5co-header {
+  padding-top: 40px;
+  margin-bottom: 30px;
+}
+#fh5co-header #fh5co-logo img {
+  max-width: 100%;
+}
+#fh5co-header nav {
+  padding-top: 20px;
+}
+#fh5co-header nav ul {
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+.imglogo {
+  background: white;
+  border-radius: 24%;
+}
+#fh5co-header nav ul li {
+  padding: 0;
+  margin: 0;
+  /* display: -moz-inline-stack; */
+  display: inline-block;
+  zoom: 1;
+  *display: inline;
+  list-style: none;
+  font-size: 15px;
+}
+#fh5co-header nav ul li a {
+  color: black;
+  padding: 10px;
+  font-weight: bold;
+}
+#fh5co-header {
+  background: white;
+  padding-bottom: 20px;
+  color: black;
+  margin-bottom: 30px;
+}
+@media screen and (max-width: 480px) {
+  #fh5co-header nav ul li a {
+    padding: 5px;
+  }
+}
+img {
+  border-radius: 5%;
+}
+/* End Header Style */
+/* Intro section */
+.intro {
+  margin: 1.75em 0 0.75em;
+  border-bottom: 3px double rgba(0, 0, 0, 0.05);
+  margin-bottom: 1.75em;
+}
+
+.intro a {
+  opacity: 0.7;
+}
+
+.intro a:hover {
+  opacity: 1;
+}
+
+.intro h3 {
+  font-size: 0.825em;
+  font-weight: 700;
+  /* text-transform: uppercase; */
+  display: inline-block;
+  margin: 0.25em 0.75em 0.75em;
+}
+
+.intro h3 a {
+  font-weight: 400;
+}
+
+/* Masonry grid */
+.masonry {
+  column-gap: 30px;
+}
+.bric {
+  width: 100% !important;
+  height: auto !important;
+  margin-bottom: 5px;
+}
+/* Masonry item */
+.masonry .brick {
+  margin-bottom: 30px;
+  display: inline-block; /* Fix the misalignment of items */
+  vertical-align: top;
+  /* Keep the item on the very top */
+}
+
+/* Masonry image effects */
+.masonry .brick img {
+  /* transition: all 0.5s ease-in-out; */
+  backface-visibility: hidden; /* Remove Image flickering on hover */
+  border-radius: 5%;
+}
+
+.masonry .brick:hover img {
+  opacity: 0.75;
+}
+
+/* Bordered masonry */
+.masonry.bordered {
+  column-gap: 50px;
+}
+
+.masonry.bordered .brick {
+  padding-bottom: 25px;
+  margin-bottom: 25px;
+  border-bottom: 1px solid #eee;
+}
+
+/* Gutterless masonry */
+.masonry.gutterless {
+  column-gap: 0;
+}
+
+.masonry.gutterless .brick {
+  margin-bottom: 5px;
+}
+
+/* Masonry on tablets */
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  .masonry {
+    column-count: 2;
+  }
+}
+
+/* Masonry on big screens */
+@media only screen and (min-width: 1024px) {
+  .desc {
+    font-size: 1.25em;
+  }
+
+  .masonry {
+    column-count: 3;
+  }
+}
