@@ -10,7 +10,7 @@ li a {
 }
 /* Add From me To Fix the size of image */
 div#modal-btn {
-  width: 200px !important;
+  width: 200px;
 }
 .gallery-wrapper
   .gallery

@@ -8,7 +8,7 @@
   box-sizing: border-box;
 }
 body {
-  font-family: Baloo Tammudu\2, cursive;
+  font-family: Baloo tammudu\2, cursive;
   background: #e7e7e7;
 }
 .gallery-wrapper {
@@ -66,7 +66,24 @@ body {
 }
 @media screen and (max-width: 450px) {
   .gallery-wrapper .gallery {
+    grid-template-columns: repeat(2, minmax(200px, 1fr));
+  }
+  div#modal-btn {
+    width: 155px !important;
+  }
+  .gallery {
+    grid-gap: 10px 5px !important;
+  }
+}
+@media screen and (max-width: 420px) {
+  .gallery-wrapper .gallery {
     grid-template-columns: repeat(1, minmax(200px, 1fr));
+  }
+  div#modal-btn {
+    width: 155px !important;
+  }
+  .gallery {
+    grid-gap: 10px 5px !important;
   }
 }
 .c-loader {
