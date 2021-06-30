@@ -1,6 +1,6 @@
 /* Defaults */
 body {
-  background: #8a8a8a;
+  background: #eae9e9;
   color: black;
 }
 
@@ -48,7 +48,7 @@ li a {
 }
 #fh5co-header {
   background: white;
-  padding-bottom: 20px;
+  padding-bottom: 1px;
   color: black;
   margin-bottom: 30px;
 }
@@ -65,7 +65,7 @@ img {
 .intro {
   margin: 1.75em 0 0.75em;
   border-bottom: 3px double rgba(0, 0, 0, 0.05);
-  margin-bottom: 1.75em;
+  margin-bottom: 0.75em;
 }
 
 .intro a {

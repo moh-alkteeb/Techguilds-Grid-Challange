@@ -16,7 +16,7 @@ function Header() {
               ></img>
             </a>
           </div>
-          <nav>
+          <nav className="intro">
             <ul>
               <li>
                 <NavLink to="/" exact activeStyle={activeStyle}>

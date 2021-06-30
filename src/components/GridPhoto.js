@@ -4,7 +4,7 @@ import UnsplashImage from "./UnsplashImage";
 import { Loader } from "./common/Loader";
 import axios from "axios";
 import InfiniteScroll from "react-infinite-scroll-component";
-
+import { SRLWrapper } from "simple-react-lightbox";
 function GridPhoto() {
   const [images, setImage] = useState([]);
 
@@ -12,7 +12,7 @@ function GridPhoto() {
     fetchImages();
   }, []);
   // Fetch images to the page when Scroll down "Infinite Scroll"
-  const fetchImages = (count = 7) => {
+  const fetchImages = (count = 10) => {
     const apiRoot = "https://api.unsplash.com";
     // Unsplash Key
     const accessKey = process.env.REACT_APP_ACCESSKEY;
@@ -33,17 +33,20 @@ function GridPhoto() {
           next={fetchImages}
           hasMore={true}
           loader={<Loader />}
-          className="gallery"
         >
-          {images.map((image, index) => (
-            <UnsplashImage
-              url={image.urls.thumb}
-              key={image.id}
-              height={image.height}
-              width={image.width}
-              alt_description={image.alt_description}
-            />
-          ))}
+          <div className="gallery">
+            <SRLWrapper>
+              {images.map((image, index) => (
+                <UnsplashImage
+                  url={image.urls.thumb}
+                  key={image.id}
+                  height={image.height}
+                  width={image.width}
+                  alt_description={image.alt_description}
+                />
+              ))}
+            </SRLWrapper>
+          </div>
         </InfiniteScroll>
       </div>
     </div>
