@@ -1,17 +1,15 @@
 import React from "react";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/blur.css";
-import { SRLWrapper } from "simple-react-lightbox";
-const options = {
-  settings: {},
-  caption: {},
-  buttons: {},
-  thumbnails: {},
-  progressBar: {},
-  translations: {} /* PRO ONLY */,
-  icons: {} /* PRO ONLY */,
-};
-export const UnsplashImage = ({ url, key, height, width, alt_description }) => {
+
+export const UnsplashImage = ({
+  url,
+  key,
+  height,
+  width,
+  alt_description,
+  urlLightbox,
+}) => {
   let classPortait = "";
   if (height > width) {
     classPortait = "portrait";
@@ -19,7 +17,7 @@ export const UnsplashImage = ({ url, key, height, width, alt_description }) => {
   return (
     <>
       <div id="modal-btn" className={classPortait}>
-        <a href={url} id="modal-btn" className={classPortait}>
+        <a href={urlLightbox}>
           <LazyLoadImage
             effect="blur"
             key={key}
